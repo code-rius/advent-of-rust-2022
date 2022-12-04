@@ -2,10 +2,10 @@ const fs = require('fs');
 const readline = require('readline');
 
 const getFileContents = (filePath) => {
-  let data
+  let data;
   try {
     data = fs.readFileSync(filePath, 'utf8');
-    data = data.split('\n')
+    data = data.split('\n');
   } catch (err) {
     console.error(err);
     throw (err);
@@ -29,7 +29,6 @@ const getThreeLargest = (array) => {
 
 const calculateElfCalories = () => {
   const fileData = getFileContents('./input.txt');
-  console.log(fileData);
   
   let moneySums = [];
   let lastLine;
